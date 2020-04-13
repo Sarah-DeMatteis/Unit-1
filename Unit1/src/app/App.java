@@ -2,44 +2,28 @@ package app;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-       short favNumber = 571;
-       char stateNameFirstLetter = 'M';
-       boolean isHomeworkDone = false;
-       byte daysInApril = 30;
-       float outsideTemp = 42.3f;
-       double mathAnswer = 34.52647438;
-       int coronavirusCases = 1500000;
-       long starsInMilkyWay = 100000000000L;
+
+        String person1 = "Jamie";
+        String person2 = "Michael";
+
+        String verb1 = "fly";
+        String verb2 = "juggle";
+        String verb3 = "scream";
+
+        String food = "shrimp scampi";
+
+        String dayOfWeek = "Tuesday";
+
+        String place1 = "Culver's";
+        String place2 = "grocery store";
+
+        String adjective1 = "moist";
+        String adjective2 = "brilliant";
 
 
-       System.out.println("My favorite number is:");
-       System.out.println(favNumber);
-
-       System.out.println("True or false: Sarah finished her homework.");
-       System.out.println(isHomeworkDone);
-
-       System.out.println("The first letter of Minnesota is:");
-       System.out.println(stateNameFirstLetter);
-
-       System.out.println("There are");
-       System.out.println(daysInApril);
-       System.out.println("days in April.");
-
-       System.out.println("The answer to math problem 1 is:");
-       System.out.println(mathAnswer);
-
-       System.out.println("The temperature outside is");
-       System.out.println(outsideTemp);
-       System.out.println("degrees Fahrenheit.");
-
-       System.out.println("There are at least");
-       System.out.println(coronavirusCases);
-       System.out.println("coronavirus cases. Probably more.");
-
-       System.out.println("There are around");
-       System.out.println(starsInMilkyWay);
-       System.out.println("stars in the Milky Way Galaxy.");
-
+        System.out.println(person1 + " is a programmer who likes to " + verb1 + ".");
+        System.out.println("Every " + dayOfWeek + " they make a " + adjective1 + " " + food + " for breakfast and " + verb2 + " at " + place1 + " with " + person2 + ".");
+        System.out.println("Sometimes, they go to the " + adjective2 + " " + place2 + " with " + person2 + " so that they can " + verb3 + " together.");
+   
     }
 }
