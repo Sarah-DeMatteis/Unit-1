@@ -2,28 +2,27 @@ package app;
 
 public class App {
     public static void main(String[] args) throws Exception {
+       int count = 0;
+       String color = "red";
+       boolean isHungry = true;
+       
+        while (count < 10) {
+            System.out.println("The count is " + count);
+            count = count + 1;
+        }
+        System.out.println("Count finished");
 
-        String person1 = "Jamie";
-        String person2 = "Michael";
+        while (color == "red") {
+            System.out.println("The color is " + color + ", please change");
+            color = "blue";
+        }
+        System.out.println("The color " + color + " is now ready");
 
-        String verb1 = "fly";
-        String verb2 = "juggle";
-        String verb3 = "scream";
-
-        String food = "shrimp scampi";
-
-        String dayOfWeek = "Tuesday";
-
-        String place1 = "Culver's";
-        String place2 = "grocery store";
-
-        String adjective1 = "moist";
-        String adjective2 = "brilliant";
-
-
-        System.out.println(person1 + " is a programmer who likes to " + verb1 + ".");
-        System.out.println("Every " + dayOfWeek + " they make a " + adjective1 + " " + food + " for breakfast and " + verb2 + " at " + place1 + " with " + person2 + ".");
-        System.out.println("Sometimes, they go to the " + adjective2 + " " + place2 + " with " + person2 + " so that they can " + verb3 + " together.");
-   
+        while (isHungry == true) {
+            System.out.println("Food needed");
+            isHungry = false;
+        }
+        System.out.println("Giving food...");
+        System.out.println("Hunger sated");
     }
 }
