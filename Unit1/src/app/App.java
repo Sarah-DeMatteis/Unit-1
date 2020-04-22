@@ -5,13 +5,13 @@ public class App {
 
         System.out.println("Start first loop");
 
-        for(int i1 = 0; i1 <= 19; i1++){
-            System.out.println(i1);
+        for(int i = 20; i >= 0; i = i - 1){
+            System.out.println(i);
 
-            if(i1 == 10){
+            if(i == 10){
 
-                for(int i2 = 1; i2 <= 5; i2++){
-                    System.out.println(i1);
+                for(int j = 1; j <= 7; j++){
+                    System.out.println(i);
                 }
             }
         }
@@ -19,11 +19,14 @@ public class App {
         System.out.println("End first loop");
         System.out.println("Start second loop");
 
-        for(int i3 = -1; i3 <= 19; i3++){
+        for(int i = 0; i <= 39; i++){
 
-            if(i3 % 3 == 0){               
+            if(i % 13 == 0){     
+                System.out.println("Hey!");
             } else {
-                System.out.println(i3);
+                if(i % 4 == 0){
+                    System.out.println(i);
+                }
             }
         }
 
