@@ -5,7 +5,7 @@ public class App {
 
         System.out.println("Start first loop");
 
-        for(int i = 20; i >= 0; i = i - 1){
+        for(int i = 20; i >= 1; i = i - 1){
             System.out.println(i);
 
             if(i == 10){
@@ -19,9 +19,11 @@ public class App {
         System.out.println("End first loop");
         System.out.println("Start second loop");
 
-        for(int i = 0; i <= 39; i++){
+        for(int i = 0; i <= 38; i = i + 2){
 
-            if(i % 13 == 0){     
+            int j = i - 2;
+
+            if(j % 12 == 0){
                 System.out.println("Hey!");
             } else {
                 if(i % 4 == 0){
