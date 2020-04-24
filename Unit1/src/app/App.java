@@ -3,26 +3,29 @@ package app;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        System.out.println("Double or single digit?");
+        System.out.println("Start first loop");
         
-        for(int i = 20; i >= 1; i = i-1){
-      
-            if(i > 9){
-                System.out.println(i + " is double digit");
+        for(int i = 1; i < 11; i++){
+            if(i == 5){
+                System.out.println("five");
             } else {
-                System.out.println(i + " is single digit");
+                System.out.println(i);
             }
         }
 
-        System.out.println("Nice!");
-        System.out.println("Fast food");
+        System.out.println("End first loop");
+        System.out.println("Start second loop");
 
-        for(int i = 0; i <= 4; i++){
-            System.out.println("Burgers");
-            System.out.println("Fries");
+        for(int i = 100; i <= 200; i = i + 10){
+            System.out.println(i);
+            if(i == 150){
+                for(int j = 151; j < 160; j++){
+                    System.out.println(j);
+                }
+            }
         }
 
-        System.out.println("Nice!");
+        System.out.println("End second loop");
 
     }
 }
