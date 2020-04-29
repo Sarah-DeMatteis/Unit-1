@@ -8,22 +8,14 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter your first name.");
-        String firstName = input.nextLine();
+        System.out.println("Please enter the password.");
 
-        System.out.println("Please enter your last name.");
-        String lastName = input.nextLine();
+        String pass = input.nextLine();
 
-        System.out.println("Please enter your age.");
-        String age = input.nextLine();
-
-        System.out.println("Please enter your grade number. If you are in kindergarten, please type K. If you are in preschool, please type preK.");
-        String grade = input.nextLine();
-
-        System.out.println("Please enter your favorite color.");
-        String favColor = input.nextLine();
-
-        System.out.println("Hello, " + firstName + " " + lastName + ". You are " + age + " years old and are in grade " + grade + ". You picked " + favColor + " as your favorite color, so it is clear you have good taste.");
-       
+        if(pass.equals("183726073")){
+            System.out.println("ACCESS GRANTED");
+        } else {
+            System.out.println("ACCESS DENIED");
+        }
     }
 }
