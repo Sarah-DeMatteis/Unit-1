@@ -44,8 +44,7 @@ public class App {
         for(int i = 1; i <= num; i++){
             System.out.println(i);
         }
-
-        System.out.println("Test for github");
+        
         
     }
 }
