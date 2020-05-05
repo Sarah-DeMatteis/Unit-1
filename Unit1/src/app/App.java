@@ -38,5 +38,14 @@ public class App {
             System.out.println("INCORRECT");
         }
         
+        System.out.println("What is the count?");
+        int num = input.nextInt();
+
+        for(int i = 1; i <= num; i++){
+            System.out.println(i);
+        }
+
+        System.out.println("Test for github");
+        
     }
 }
