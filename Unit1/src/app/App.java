@@ -8,14 +8,35 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter the password.");
+        System.out.println("What is the capital of North Carolina?");
 
-        String pass = input.nextLine();
+        String ans1 = input.nextLine();
 
-        if(pass.equals("183726073")){
-            System.out.println("ACCESS GRANTED");
+        if(ans1.equals("Raleigh")){
+            System.out.println("CORRECT");
         } else {
-            System.out.println("ACCESS DENIED");
+            System.out.println("INCORRECT");
         }
+
+        System.out.println("How many centimeters are in a meter?");
+
+        String ans2 = input.nextLine();
+
+        if(ans2.equals("100")){
+            System.out.println("CORRECT");
+        } else {
+            System.out.println("INCORRECT");
+        }
+
+        System.out.println("Who was the 2nd president of the United States?");
+
+        String ans3 = input.nextLine();
+
+        if(ans3.equals("John Adams")){
+            System.out.println("CORRECT");
+        } else {
+            System.out.println("INCORRECT");
+        }
+        
     }
 }
