@@ -8,41 +8,41 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter a name.");
-        String name1 = input.nextLine();
-        
-        System.out.println("Please enter a noun.");     
-        String noun1 = input.nextLine();
+        System.out.println("Free Calculator: Enter two numbers to add, subtract, multiply, or divide.");
+        System.out.println("Please enter a first number.");
+        int num1 = input.nextInt();
 
-        System.out.println("Please enter an adjective.");
-        String adj1 = input.nextLine();
+        System.out.println("Please enter a second number.");
+        int num2 = input.nextInt();
 
-        System.out.println("Please enter a verb.");
-        String verb1 = input.nextLine();
+        System.out.println("Please select an operation for your numbers.");
+        String lol = input.nextLine();
 
-        System.out.println("Please enter a name.");
-        String name2 = input.nextLine();
+        System.out.println("Type add, subtract, multiply, or divide");
+        String operation = input.nextLine();
 
-        System.out.println("Please enter a place.");
-        String place1 = input.nextLine();
+        if(operation.equals("add")){
+            int ans = num1 + num2;
+            System.out.println(ans);
+        } else {
+            if(operation.equals("subtract")){
+                int ans = num1 - num2;
+                System.out.println(ans);
+            } else {
+                if(operation.equals("multiply")){
+                    int ans = num1 * num2;
+                    System.out.println(ans);
+                } else {
+                    if(operation.equals("divide")){
+                        int ans = num1 / num2;
+                        System.out.println(ans);
+                    } else {
+                        System.out.println("Sorry, your operation was not recognized. Please reenter your numbers and try again.");
+                    }
+                }       
+            }
+        }
 
-        System.out.println("Please enter a verb.");
-        String verb2 = input.nextLine();
 
-        System.out.println("Please enter a number.");
-        String num1 = input.nextLine();
-
-        System.out.println("Please enter a plural noun.");
-        String noun2 = input.nextLine();
-
-        System.out.println("Please enter a verb.");
-        String verb3 = input.nextLine();
-        
-        System.out.println(name1 + " is enjoying some time with their favorite " + noun1 + " at home. It is a nice, sunny day outside.");
-        System.out.println("Then, all of a sudden, a " + adj1 + " person named " + name2 + " comes up to the house and proceeds to " + verb1 + " down the door. " + name2 + " looks like they just came from " + place1 + ".");
-        System.out.println(name2 + " quickly hurries over to " + name1 + ". " + name2 + " begins to " + verb2 + " " + num1 + " times and then runs outside to look at the " + noun2 + " outside of the house.");
-        System.out.println(name1 + " looks on in shock. What just happened?");
-        System.out.println("Well, it turns out that " + name2 + " likes to " + verb3 + " a lot. Maybe that explains it, but... probably not.");
-        System.out.println("The end.");
     }
 }
