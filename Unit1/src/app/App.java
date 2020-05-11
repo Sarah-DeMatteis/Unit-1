@@ -7,39 +7,46 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
+        int i = 0;
 
         System.out.println("Free Calculator: Enter two numbers to add, subtract, multiply, or divide.");
-        System.out.println("Please enter a first number.");
+
+         System.out.println("Please enter a first number.");
         int num1 = input.nextInt();
 
         System.out.println("Please enter a second number.");
         int num2 = input.nextInt();
 
-        System.out.println("Please select an operation for your numbers.");
-        String lol = input.nextLine();
+        while (i == 0) {
 
-        System.out.println("Type add, subtract, multiply, or divide");
-        String operation = input.nextLine();
+            System.out.println("Please select an operation for your numbers.");
+            System.out.println("Type 1 for add, 2 for subtract, 3 for multiply, or 4 for divide");
+            int operation = input.nextInt();
 
-        if(operation.equals("add")){
-            int ans = num1 + num2;
-            System.out.println(ans);
-        } else {
-            if(operation.equals("subtract")){
-                int ans = num1 - num2;
+            if(operation == 1){
+                int ans = num1 + num2;
                 System.out.println(ans);
+                i = 1;
             } else {
-                if(operation.equals("multiply")){
-                    int ans = num1 * num2;
+                if(operation == 2){
+                    int ans = num1 - num2;
                     System.out.println(ans);
+                    i = 1;
                 } else {
-                    if(operation.equals("divide")){
-                        int ans = num1 / num2;
+                    if(operation == 3){
+                        int ans = num1 * num2;
                         System.out.println(ans);
+                        i = 1;
                     } else {
-                        System.out.println("Sorry, your operation was not recognized. Please reenter your numbers and try again.");
-                    }
-                }       
+                        if(operation == 4){
+                            int ans = num1 / num2;
+                            System.out.println(ans);
+                            i = 1;
+                        } else {
+                            System.out.println("Sorry, your operation was not recognized. Please reenter your operation and try again.");
+                        }
+                    }       
+                }
             }
         }
 
