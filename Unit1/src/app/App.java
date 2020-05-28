@@ -8,6 +8,10 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("this is painful");
+        System.out.println("Thank you for choosing Financial Finance Bank. Please enter your name.");
+
+        String name = input.nextLine();
+        Account one = new Account();
+        
     }
 }
