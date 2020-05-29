@@ -12,10 +12,10 @@ public class App {
         String name = input.nextLine();
 
         System.out.println("Please enter an initial deposit amount.");
-        int startBal = input.nextInt();
+        int bal = input.nextInt();
 
         System.out.println("Please enter a password.");
-        String idc = input.nextLine();
+        String unused = input.nextLine();
         String password = input.nextLine();
         
         System.out.println("Please confirm your password.");
@@ -33,17 +33,86 @@ public class App {
             }
         }
 
-        
-        
-    
-        
-        
-        Account account = new Account(name, startBal, password);
-        
+        Account accountOne = new Account(name, bal, password);
+        System.out.println("\nThanks for creating an account!\n");
 
+        boolean accessYes = false;
+        while(accessYes == false){
 
+            System.out.println("Please log in.");
+            System.out.println("Enter your name.");
+            String loginName = input.nextLine();
+
+            System.out.println("Enter your password.");
+            String loginPass = input.nextLine();
+
+            if(accountOne.name.equals(loginName)){
+                if(accountOne.password.equals(loginPass)){
+                    accessYes = true;
+                    System.out.println("\nWelcome, " + accountOne.name);
+                } else {
+                    System.out.println("Password incorrect. Please try again.");
+                }
+            } else {
+                System.out.println("Name not recognized. Please try again.");
+            }
+
+        }
+
+        boolean loggedIn = true;
+        while(loggedIn == true){
+
+            System.out.println("\nWhat would you like to do?");
+            System.out.println("\nPress 1 to check balance.\nPress 2 to deposit money.\nPress 3 to withdraw money.\nPress 4 to change password.\nPress 5 to log out.\n");
+
+            int action = input.nextInt();
+
+            if(action == 1){
+                System.out.println("Your current balance is " + accountOne.bal + ".");
+            }
+
+            if(action == 2){
+                System.out.println("How much would you like to deposit?");
+                int depositAmount = input.nextInt();
+                bal = bal + depositAmount;
+                System.out.println("You now have " + bal + " dollars in your account.");
+            }
+
+            if(action == 3){
+                System.out.println("How much would you like to withdraw?");
+                int withdrawAmount = input.nextInt();
+                bal = bal - withdrawAmount;
+                System.out.println("You now have " + bal + " dollars in your account.");
+            }
+
+            if(action == 4){
+                System.out.println("What would you like to change your password to?");
+                String unUsed = input.nextLine();
+                password = input.nextLine();
+
+                System.out.println("Please confirm your new password.");
+                String newPassConfirm = input.nextLine();
         
-        
+                boolean newPassYes = false;
+
+                while(newPassYes == false){
+
+                    if(newPassConfirm.equals(password)){
+                        newPassYes = true;
+                    } else {
+                        System.out.println("Please reconfirm.");
+                        newPassConfirm = input.nextLine();
+                    }
+                }
+
+                System.out.println("Password successfully changed.");
+                System.out.println("Your new password is " + accountOne.password);
+            }
+
+            if(action == 5){
+                loggedIn = false;
+            }
+        }
         
     }
 }

@@ -3,12 +3,12 @@ package Unit1.src.app;
 public class Account {
 
     String name;
-    int startBal;
+    int bal;
     String password;
 
-    Account(String name, int startBal, String password){
+    Account(String name, int bal, String password){
         this.name = name;
-        this.startBal = startBal;
+        this.bal = bal;
         this.password = password;
     }
 
