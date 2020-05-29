@@ -68,27 +68,39 @@ public class App {
             int action = input.nextInt();
 
             if(action == 1){
-                System.out.println("Your current balance is " + accountOne.bal + ".");
+                System.out.println("Your current balance is $" + accountOne.bal + ".");
             }
 
             if(action == 2){
                 System.out.println("How much would you like to deposit?");
                 int depositAmount = input.nextInt();
                 bal = bal + depositAmount;
-                System.out.println("You now have " + bal + " dollars in your account.");
+                System.out.println("You now have $" + bal + " in your account.");
             }
 
             if(action == 3){
                 System.out.println("How much would you like to withdraw?");
                 int withdrawAmount = input.nextInt();
                 bal = bal - withdrawAmount;
-                System.out.println("You now have " + bal + " dollars in your account.");
+                System.out.println("You now have $" + bal + " dollars in your account.");
+
+                if(bal < 0){
+                    System.out.println("Congratulations! You're in debt!");
+
+                    if(bal < -1000){
+                        System.out.println("A $500 fee has been charged.");
+                        bal = bal - 500;
+                    } else {
+                        System.out.println("A $50 fee has been charged.");
+                        bal = bal - 50;
+                    }
+                }
             }
 
             if(action == 4){
                 System.out.println("What would you like to change your password to?");
                 String unUsed = input.nextLine();
-                password = input.nextLine();
+                accountOne.password = input.nextLine();
 
                 System.out.println("Please confirm your new password.");
                 String newPassConfirm = input.nextLine();
@@ -97,7 +109,7 @@ public class App {
 
                 while(newPassYes == false){
 
-                    if(newPassConfirm.equals(password)){
+                    if(newPassConfirm.equals(accountOne.password)){
                         newPassYes = true;
                     } else {
                         System.out.println("Please reconfirm.");
