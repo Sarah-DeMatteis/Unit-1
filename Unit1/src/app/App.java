@@ -13,9 +13,9 @@ public class App {
 
         System.out.println("Please enter an initial deposit amount.");
         int bal = input.nextInt();
+        input.nextLine();
 
         System.out.println("Please enter a password.");
-        String unused = input.nextLine();
         String password = input.nextLine();
         
         System.out.println("Please confirm your password.");
@@ -66,6 +66,7 @@ public class App {
             System.out.println("\nPress 1 to check balance.\nPress 2 to deposit money.\nPress 3 to withdraw money.\nPress 4 to change password.\nPress 5 to log out.\n");
 
             int action = input.nextInt();
+            input.nextLine();
 
             if(action == 1){
                 System.out.println("Your current balance is $" + accountOne.bal + ".");
@@ -74,6 +75,7 @@ public class App {
             if(action == 2){
                 System.out.println("How much would you like to deposit?");
                 int depositAmount = input.nextInt();
+
                 bal = bal + depositAmount;
                 System.out.println("You now have $" + bal + " in your account.");
             }
@@ -81,11 +83,12 @@ public class App {
             if(action == 3){
                 System.out.println("How much would you like to withdraw?");
                 int withdrawAmount = input.nextInt();
+
                 bal = bal - withdrawAmount;
-                System.out.println("You now have $" + bal + " dollars in your account.");
+                System.out.println("You now have $" + bal + " in your account.");
 
                 if(bal < 0){
-                    System.out.println("Congratulations! You're in debt!");
+                    System.out.println("\nCongratulations! You're in debt!");
 
                     if(bal < -1000){
                         System.out.println("A $500 fee has been charged.");
@@ -99,7 +102,6 @@ public class App {
 
             if(action == 4){
                 System.out.println("What would you like to change your password to?");
-                String unUsed = input.nextLine();
                 accountOne.password = input.nextLine();
 
                 System.out.println("Please confirm your new password.");
